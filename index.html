@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todo list using vanilla javascript. Reactjs todo list for beginners. Todo list in github repository." />
+    <meta name="keywords" content="" />
+    <title>Todo list using vanilla javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="todo">
+        <h1 class="heading">Todo List</h1>
+        <form action="" class="todo-form">
+            <input type="text" name="todo" placeholder="Add todo..." class="input-control" />
+            <button class="btn btn-primary">Add</button>
+        </form>
+        <table class="todo-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="select-all" /></th>
+                    <th class="todo-table-action active">Item</th>
+                    <th class="todo-table-action">
+                        <button class="btn btn-sm btn-primary" onclick="changeCompletedMany(true)">Completed</button>
+                        <button class="btn btn-sm btn-warning" onclick="changeCompletedMany(false)">Active</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteManyItems()">Delete</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="todo-table-body">
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

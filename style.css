@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg: #293462;
+    --white: #fff;
+    --gray-200: #ccc;
+    --primary: #249CF3;
+    --primary-100: #1f88d3;
+    --gray-200: #CCC;
+    --warning: #FF9D09;
+    --danger: #CF0000;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo{
+    max-width: 530px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+.todo-form > .input-control {
+    margin-right: 10px;
+    padding: 5px 5px;
+    line-height: 1.6;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--gray-200);
+    border-radius: 4px;
+}
+.btn{
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.btn-sm {
+    padding: 4px 8px;
+}
+.btn-primary{
+    background-color: var(--primary);
+    color: #fff;
+}
+.btn-warning{
+    background-color: var(--warning);
+    color: #fff;
+}
+.btn-danger{
+    background-color: var(--danger);
+    color: #fff;
+}
+.todo-table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.todo-table th, .todo-table td {
+    padding: 6px 10px;
+    text-align: left;
+    border-top: 1px solid var(--gray-200);
+}
+.todo-table th:first-child {
+    width: 0;
+}
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-text{
+    border: 1px dashed var(--gray-200);
+    outline: none;
+    padding: 3px;
+    width: 100%;
+}
+.todo-text:read-only{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    
+    padding: 0px;
+}
+.completed .todo-text:read-only {
+    text-decoration: line-through;
+}
+.todo-item-action{
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+.todo-item-action span{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+tr:hover .todo-item-action {
+    visibility: visible;
+}
+.todo-table-action {
+    display: none;
+}
+.todo-table-action.active {
+    display: table-cell;
+}
+#select-all{
+    min-height: 24px;
+}
